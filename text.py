@@ -24,8 +24,8 @@ def FindAuthor(s):
         '([\w]+):',                        # First Name
         '([\w]+[\s]+[\w]+):',              # First Name + Last Name
         '([\w]+[\s]+[\w]+[\s]+[\w]+):',    # First Name + Middle Name + Last Name
-        '([+]\d{2} \d{5} \d{5}):',         # Mobile Number (India)
-        '([+]\d{2} \d{3} \d{3} \d{4}):',   # Mobile Number (US)
+        '([+]\d{2} \d{5} \d{5}):',         
+        '([+]\d{2} \d{3} \d{3} \d{4}):',   
         '([\w]+)[\u263a-\U0001f999]+:',
         '([\w]+) [^\s\u1f300-\u1f5ff]*'    # Name and Emoji              
     ]
@@ -50,7 +50,7 @@ def getDataPoint(line):
 
 parsedData = [] # List to keep track of data so it can be used by a Pandas dataframe
 # Upload your file here
-conversationPath = 'SinGraduacionISC.txt' # chat file
+conversationPath = 'chat.txt' # chat file
 with open(conversationPath, encoding="utf-8") as fp:    
     fp.readline() # Skipping first line of the file because contains information related to something about end-to-end encryption
     messageBuffer = [] 
